@@ -13,12 +13,12 @@ def file_selector(folder_path="./data/", type=""):
         return os.path.join(folder_path, selected_filename)
 selectedFile = file_selector()
 df = pd.read_csv(selectedFile)
-simpleDF = df[["instructor", "average_gpa", "rating"]]
+simpleDF = df[["Instructor", "Average_Gpa", "Rating"]]
 
-fig = px.scatter(simpleDF, x='rating', y='average_gpa',
+fig = px.scatter(simpleDF, x='Rating', y='Average_Gpa',
               color='instructor')
 
-st.header(str(selectedFile.replace("./data/", "").replace(".csv", "")) + " Rating vs GPA")
+st.header(str(selectedFile.replace("./data/", "").replace(".csv", "")) + " GPA vs Rating")
 st.plotly_chart(fig, use_container_width=True)
 
 meanDF = simpleDF
