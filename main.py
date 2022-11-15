@@ -29,6 +29,6 @@ col, col2 = st.columns(2)
 df_merged = pd.merge(groupedByInstructorGPA, groupedByInstructorRating, how="inner", on="instructor")
 col.dataframe(df_merged, width=300)
 try:
-        col2.header("Highest Rank: " + df_merged.idxmax())
+        col2.header(str("best : " + df_merged.idxmax()).replace("dtype: object", ""))
 except:
         st.error("Not enough data")
