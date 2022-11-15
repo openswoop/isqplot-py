@@ -13,9 +13,9 @@ def file_selector(folder_path="./data/", type=""):
         return os.path.join(folder_path, selected_filename)
 selectedFile = file_selector()
 df = pd.read_csv(selectedFile)
-simpleDF = df[["Instructor", "Average_Gpa", "Rating"]]
+simpleDF = df[["instructor", "average_gpa", "rating"]]
 
-fig = px.scatter(simpleDF, x='Rating', y='Average_Gpa',
+fig = px.scatter(simpleDF, x='rating', y='average_gpa',
               color='instructor')
 
 st.header(str(selectedFile.replace("./data/", "").replace(".csv", "")) + " GPA vs Rating")
