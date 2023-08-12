@@ -1,6 +1,6 @@
 # ISQ Plot py
 
-[main · Streamlit](https://andreasink-isqplot-main-2da7lj.streamlit.app/)
+[main · Streamlit](https://openswoop-isq.streamlit.app)
 
 The goal of this repo is to ensure everyone makes the best schedule possible at the University of North FL.  Professors are at the core of student success, with ISQ Plot py you can easily find the best professor to take a course with.
 
